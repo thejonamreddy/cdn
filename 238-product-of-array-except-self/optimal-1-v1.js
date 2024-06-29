@@ -32,8 +32,5 @@ var productExceptSelf = function (nums) {
     }
   }
 
-  console.log(prefixArr)
-  console.log(suffixArr)
-
   return output
 };
