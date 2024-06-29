@@ -16,8 +16,8 @@ var productExceptSelf = function (nums) {
   let suffixProduct = 1
   for (let i = nums.length - 1; i >= 0; i--) {
     /* 
-        Don't calculate the suffixProduct here since we need the 
-        suffix product to not include the current element 
+      Don't calculate the suffixProduct here since we need the 
+      suffix product to not include the current element 
     */
     if (i === 0) {
       output[i] = suffixProduct
@@ -27,8 +27,8 @@ var productExceptSelf = function (nums) {
       output[i] = output[i - 1] * suffixProduct
     }
     /* 
-        Instead, do it here, 
-        so that the next iteration gets the current element product 
+      Instead, do it here, 
+      so that the next iteration gets the current element product 
     */
     suffixProduct = suffixProduct * nums[i]
   }
